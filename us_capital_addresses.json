@@ -1,0 +1,754 @@
+{
+  "stateCapitols": [
+    {
+      "state": "Alabama",
+      "capitol": "Montgomery",
+      "address": {
+        "buildingName": "Alabama State Capitol",
+        "street": "600 Dexter Avenue",
+        "city": "Montgomery",
+        "state": "AL",
+        "zipCode": "36130",
+        "coordinates": {
+          "latitude": 32.3777,
+          "longitude": -86.3000
+        }
+      }
+    },
+    {
+      "state": "Alaska",
+      "capitol": "Juneau",
+      "address": {
+        "buildingName": "Alaska State Capitol",
+        "street": "120 4th Street",
+        "city": "Juneau",
+        "state": "AK",
+        "zipCode": "99801",
+        "coordinates": {
+          "latitude": 58.3019,
+          "longitude": -134.4197
+        }
+      }
+    },
+    {
+      "state": "Arizona",
+      "capitol": "Phoenix",
+      "address": {
+        "buildingName": "Arizona State Capitol",
+        "street": "1700 West Washington Street",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zipCode": "85007",
+        "coordinates": {
+          "latitude": 33.4484,
+          "longitude": -112.0740
+        }
+      }
+    },
+    {
+      "state": "Arkansas",
+      "capitol": "Little Rock",
+      "address": {
+        "buildingName": "Arkansas State Capitol",
+        "street": "500 Woodlane Street",
+        "city": "Little Rock",
+        "state": "AR",
+        "zipCode": "72201",
+        "coordinates": {
+          "latitude": 34.7465,
+          "longitude": -92.2896
+        }
+      }
+    },
+    {
+      "state": "California",
+      "capitol": "Sacramento",
+      "address": {
+        "buildingName": "California State Capitol",
+        "street": "1315 10th Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipCode": "95814",
+        "coordinates": {
+          "latitude": 38.5752,
+          "longitude": -121.4938
+        }
+      }
+    },
+    {
+      "state": "Colorado",
+      "capitol": "Denver",
+      "address": {
+        "buildingName": "Colorado State Capitol",
+        "street": "200 East Colfax Avenue",
+        "city": "Denver",
+        "state": "CO",
+        "zipCode": "80203",
+        "coordinates": {
+          "latitude": 39.7392,
+          "longitude": -104.9847
+        }
+      }
+    },
+    {
+      "state": "Connecticut",
+      "capitol": "Hartford",
+      "address": {
+        "buildingName": "Connecticut State Capitol",
+        "street": "210 Capitol Avenue",
+        "city": "Hartford",
+        "state": "CT",
+        "zipCode": "06106",
+        "coordinates": {
+          "latitude": 41.7658,
+          "longitude": -72.6734
+        }
+      }
+    },
+    {
+      "state": "Delaware",
+      "capitol": "Dover",
+      "address": {
+        "buildingName": "Delaware Legislative Hall",
+        "street": "411 Legislative Avenue",
+        "city": "Dover",
+        "state": "DE",
+        "zipCode": "19901",
+        "coordinates": {
+          "latitude": 39.1582,
+          "longitude": -75.5244
+        }
+      }
+    },
+    {
+      "state": "Florida",
+      "capitol": "Tallahassee",
+      "address": {
+        "buildingName": "Florida State Capitol",
+        "street": "400 South Monroe Street",
+        "city": "Tallahassee",
+        "state": "FL",
+        "zipCode": "32399",
+        "coordinates": {
+          "latitude": 30.4383,
+          "longitude": -84.2807
+        }
+      }
+    },
+    {
+      "state": "Georgia",
+      "capitol": "Atlanta",
+      "address": {
+        "buildingName": "Georgia State Capitol",
+        "street": "206 Washington Street SW",
+        "city": "Atlanta",
+        "state": "GA",
+        "zipCode": "30334",
+        "coordinates": {
+          "latitude": 33.7490,
+          "longitude": -84.3880
+        }
+      }
+    },
+    {
+      "state": "Hawaii",
+      "capitol": "Honolulu",
+      "address": {
+        "buildingName": "Hawaii State Capitol",
+        "street": "415 South Beretania Street",
+        "city": "Honolulu",
+        "state": "HI",
+        "zipCode": "96813",
+        "coordinates": {
+          "latitude": 21.3069,
+          "longitude": -157.8583
+        }
+      }
+    },
+    {
+      "state": "Idaho",
+      "capitol": "Boise",
+      "address": {
+        "buildingName": "Idaho State Capitol",
+        "street": "700 West Jefferson Street",
+        "city": "Boise",
+        "state": "ID",
+        "zipCode": "83702",
+        "coordinates": {
+          "latitude": 43.6177,
+          "longitude": -116.1996
+        }
+      }
+    },
+    {
+      "state": "Illinois",
+      "capitol": "Springfield",
+      "address": {
+        "buildingName": "Illinois State Capitol",
+        "street": "401 South 2nd Street",
+        "city": "Springfield",
+        "state": "IL",
+        "zipCode": "62706",
+        "coordinates": {
+          "latitude": 39.7817,
+          "longitude": -89.6501
+        }
+      }
+    },
+    {
+      "state": "Indiana",
+      "capitol": "Indianapolis",
+      "address": {
+        "buildingName": "Indiana Statehouse",
+        "street": "200 West Washington Street",
+        "city": "Indianapolis",
+        "state": "IN",
+        "zipCode": "46204",
+        "coordinates": {
+          "latitude": 39.7684,
+          "longitude": -86.1581
+        }
+      }
+    },
+    {
+      "state": "Iowa",
+      "capitol": "Des Moines",
+      "address": {
+        "buildingName": "Iowa State Capitol",
+        "street": "1007 East Grand Avenue",
+        "city": "Des Moines",
+        "state": "IA",
+        "zipCode": "50319",
+        "coordinates": {
+          "latitude": 41.5910,
+          "longitude": -93.6037
+        }
+      }
+    },
+    {
+      "state": "Kansas",
+      "capitol": "Topeka",
+      "address": {
+        "buildingName": "Kansas State Capitol",
+        "street": "300 SW 10th Avenue",
+        "city": "Topeka",
+        "state": "KS",
+        "zipCode": "66612",
+        "coordinates": {
+          "latitude": 39.0473,
+          "longitude": -95.6752
+        }
+      }
+    },
+    {
+      "state": "Kentucky",
+      "capitol": "Frankfort",
+      "address": {
+        "buildingName": "Kentucky State Capitol",
+        "street": "700 Capitol Avenue",
+        "city": "Frankfort",
+        "state": "KY",
+        "zipCode": "40601",
+        "coordinates": {
+          "latitude": 38.1870,
+          "longitude": -84.8753
+        }
+      }
+    },
+    {
+      "state": "Louisiana",
+      "capitol": "Baton Rouge",
+      "address": {
+        "buildingName": "Louisiana State Capitol",
+        "street": "900 North Third Street",
+        "city": "Baton Rouge",
+        "state": "LA",
+        "zipCode": "70802",
+        "coordinates": {
+          "latitude": 30.4515,
+          "longitude": -91.1871
+        }
+      }
+    },
+    {
+      "state": "Maine",
+      "capitol": "Augusta",
+      "address": {
+        "buildingName": "Maine State House",
+        "street": "210 State Street",
+        "city": "Augusta",
+        "state": "ME",
+        "zipCode": "04330",
+        "coordinates": {
+          "latitude": 44.3071,
+          "longitude": -69.7823
+        }
+      }
+    },
+    {
+      "state": "Maryland",
+      "capitol": "Annapolis",
+      "address": {
+        "buildingName": "Maryland State House",
+        "street": "100 State Circle",
+        "city": "Annapolis",
+        "state": "MD",
+        "zipCode": "21401",
+        "coordinates": {
+          "latitude": 38.9784,
+          "longitude": -76.4922
+        }
+      }
+    },
+    {
+      "state": "Massachusetts",
+      "capitol": "Boston",
+      "address": {
+        "buildingName": "Massachusetts State House",
+        "street": "24 Beacon Street",
+        "city": "Boston",
+        "state": "MA",
+        "zipCode": "02133",
+        "coordinates": {
+          "latitude": 42.3588,
+          "longitude": -71.0636
+        }
+      }
+    },
+    {
+      "state": "Michigan",
+      "capitol": "Lansing",
+      "address": {
+        "buildingName": "Michigan State Capitol",
+        "street": "100 North Capitol Avenue",
+        "city": "Lansing",
+        "state": "MI",
+        "zipCode": "48933",
+        "coordinates": {
+          "latitude": 42.7335,
+          "longitude": -84.5555
+        }
+      }
+    },
+    {
+      "state": "Minnesota",
+      "capitol": "Saint Paul",
+      "address": {
+        "buildingName": "Minnesota State Capitol",
+        "street": "75 Rev Dr. Martin Luther King Jr. Boulevard",
+        "city": "Saint Paul",
+        "state": "MN",
+        "zipCode": "55155",
+        "coordinates": {
+          "latitude": 44.9537,
+          "longitude": -93.1022
+        }
+      }
+    },
+    {
+      "state": "Mississippi",
+      "capitol": "Jackson",
+      "address": {
+        "buildingName": "Mississippi State Capitol",
+        "street": "400 High Street",
+        "city": "Jackson",
+        "state": "MS",
+        "zipCode": "39201",
+        "coordinates": {
+          "latitude": 32.2988,
+          "longitude": -90.1848
+        }
+      }
+    },
+    {
+      "state": "Missouri",
+      "capitol": "Jefferson City",
+      "address": {
+        "buildingName": "Missouri State Capitol",
+        "street": "201 West Capitol Avenue",
+        "city": "Jefferson City",
+        "state": "MO",
+        "zipCode": "65101",
+        "coordinates": {
+          "latitude": 38.5767,
+          "longitude": -92.1735
+        }
+      }
+    },
+    {
+      "state": "Montana",
+      "capitol": "Helena",
+      "address": {
+        "buildingName": "Montana State Capitol",
+        "street": "1301 East 6th Avenue",
+        "city": "Helena",
+        "state": "MT",
+        "zipCode": "59601",
+        "coordinates": {
+          "latitude": 46.5891,
+          "longitude": -112.0391
+        }
+      }
+    },
+    {
+      "state": "Nebraska",
+      "capitol": "Lincoln",
+      "address": {
+        "buildingName": "Nebraska State Capitol",
+        "street": "1445 K Street",
+        "city": "Lincoln",
+        "state": "NE",
+        "zipCode": "68508",
+        "coordinates": {
+          "latitude": 40.8080,
+          "longitude": -96.6998
+        }
+      }
+    },
+    {
+      "state": "Nevada",
+      "capitol": "Carson City",
+      "address": {
+        "buildingName": "Nevada State Capitol",
+        "street": "101 North Carson Street",
+        "city": "Carson City",
+        "state": "NV",
+        "zipCode": "89701",
+        "coordinates": {
+          "latitude": 39.1638,
+          "longitude": -119.7674
+        }
+      }
+    },
+    {
+      "state": "New Hampshire",
+      "capitol": "Concord",
+      "address": {
+        "buildingName": "New Hampshire State House",
+        "street": "107 North Main Street",
+        "city": "Concord",
+        "state": "NH",
+        "zipCode": "03301",
+        "coordinates": {
+          "latitude": 43.2067,
+          "longitude": -71.5381
+        }
+      }
+    },
+    {
+      "state": "New Jersey",
+      "capitol": "Trenton",
+      "address": {
+        "buildingName": "New Jersey State House",
+        "street": "125 West State Street",
+        "city": "Trenton",
+        "state": "NJ",
+        "zipCode": "08608",
+        "coordinates": {
+          "latitude": 40.2206,
+          "longitude": -74.7697
+        }
+      }
+    },
+    {
+      "state": "New Mexico",
+      "capitol": "Santa Fe",
+      "address": {
+        "buildingName": "New Mexico State Capitol",
+        "street": "490 Old Santa Fe Trail",
+        "city": "Santa Fe",
+        "state": "NM",
+        "zipCode": "87501",
+        "coordinates": {
+          "latitude": 35.6869,
+          "longitude": -105.9378
+        }
+      }
+    },
+    {
+      "state": "New York",
+      "capitol": "Albany",
+      "address": {
+        "buildingName": "New York State Capitol",
+        "street": "State Street and Washington Avenue",
+        "city": "Albany",
+        "state": "NY",
+        "zipCode": "12224",
+        "coordinates": {
+          "latitude": 42.6526,
+          "longitude": -73.7562
+        }
+      }
+    },
+    {
+      "state": "North Carolina",
+      "capitol": "Raleigh",
+      "address": {
+        "buildingName": "North Carolina State Capitol",
+        "street": "1 East Edenton Street",
+        "city": "Raleigh",
+        "state": "NC",
+        "zipCode": "27601",
+        "coordinates": {
+          "latitude": 35.7804,
+          "longitude": -78.6391
+        }
+      }
+    },
+    {
+      "state": "North Dakota",
+      "capitol": "Bismarck",
+      "address": {
+        "buildingName": "North Dakota State Capitol",
+        "street": "600 East Boulevard Avenue",
+        "city": "Bismarck",
+        "state": "ND",
+        "zipCode": "58505",
+        "coordinates": {
+          "latitude": 46.8208,
+          "longitude": -100.7825
+        }
+      }
+    },
+    {
+      "state": "Ohio",
+      "capitol": "Columbus",
+      "address": {
+        "buildingName": "Ohio Statehouse",
+        "street": "1 Capitol Square",
+        "city": "Columbus",
+        "state": "OH",
+        "zipCode": "43215",
+        "coordinates": {
+          "latitude": 39.9612,
+          "longitude": -82.9988
+        }
+      }
+    },
+    {
+      "state": "Oklahoma",
+      "capitol": "Oklahoma City",
+      "address": {
+        "buildingName": "Oklahoma State Capitol",
+        "street": "2300 North Lincoln Boulevard",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "zipCode": "73105",
+        "coordinates": {
+          "latitude": 35.4920,
+          "longitude": -97.5032
+        }
+      }
+    },
+    {
+      "state": "Oregon",
+      "capitol": "Salem",
+      "address": {
+        "buildingName": "Oregon State Capitol",
+        "street": "900 Court Street NE",
+        "city": "Salem",
+        "state": "OR",
+        "zipCode": "97301",
+        "coordinates": {
+          "latitude": 44.9374,
+          "longitude": -123.0293
+        }
+      }
+    },
+    {
+      "state": "Pennsylvania",
+      "capitol": "Harrisburg",
+      "address": {
+        "buildingName": "Pennsylvania State Capitol",
+        "street": "501 North 3rd Street",
+        "city": "Harrisburg",
+        "state": "PA",
+        "zipCode": "17120",
+        "coordinates": {
+          "latitude": 40.2644,
+          "longitude": -76.8843
+        }
+      }
+    },
+    {
+      "state": "Rhode Island",
+      "capitol": "Providence",
+      "address": {
+        "buildingName": "Rhode Island State House",
+        "street": "82 Smith Street",
+        "city": "Providence",
+        "state": "RI",
+        "zipCode": "02903",
+        "coordinates": {
+          "latitude": 41.8308,
+          "longitude": -71.4181
+        }
+      }
+    },
+    {
+      "state": "South Carolina",
+      "capitol": "Columbia",
+      "address": {
+        "buildingName": "South Carolina State House",
+        "street": "1100 Gervais Street",
+        "city": "Columbia",
+        "state": "SC",
+        "zipCode": "29201",
+        "coordinates": {
+          "latitude": 34.0007,
+          "longitude": -81.0353
+        }
+      }
+    },
+    {
+      "state": "South Dakota",
+      "capitol": "Pierre",
+      "address": {
+        "buildingName": "South Dakota State Capitol",
+        "street": "500 East Capitol Avenue",
+        "city": "Pierre",
+        "state": "SD",
+        "zipCode": "57501",
+        "coordinates": {
+          "latitude": 44.3670,
+          "longitude": -100.3567
+        }
+      }
+    },
+    {
+      "state": "Tennessee",
+      "capitol": "Nashville",
+      "address": {
+        "buildingName": "Tennessee State Capitol",
+        "street": "600 Dr. M.L.K. Jr. Boulevard",
+        "city": "Nashville",
+        "state": "TN",
+        "zipCode": "37243",
+        "coordinates": {
+          "latitude": 36.1659,
+          "longitude": -86.7844
+        }
+      }
+    },
+    {
+      "state": "Texas",
+      "capitol": "Austin",
+      "address": {
+        "buildingName": "Texas State Capitol",
+        "street": "1100 Congress Avenue",
+        "city": "Austin",
+        "state": "TX",
+        "zipCode": "78701",
+        "coordinates": {
+          "latitude": 30.2748,
+          "longitude": -97.7404
+        }
+      }
+    },
+    {
+      "state": "Utah",
+      "capitol": "Salt Lake City",
+      "address": {
+        "buildingName": "Utah State Capitol",
+        "street": "350 State Street",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "zipCode": "84103",
+        "coordinates": {
+          "latitude": 40.7769,
+          "longitude": -111.8889
+        }
+      }
+    },
+    {
+      "state": "Vermont",
+      "capitol": "Montpelier",
+      "address": {
+        "buildingName": "Vermont State House",
+        "street": "115 State Street",
+        "city": "Montpelier",
+        "state": "VT",
+        "zipCode": "05633",
+        "coordinates": {
+          "latitude": 44.2627,
+          "longitude": -72.5716
+        }
+      }
+    },
+    {
+      "state": "Virginia",
+      "capitol": "Richmond",
+      "address": {
+        "buildingName": "Virginia State Capitol",
+        "street": "1000 Bank Street",
+        "city": "Richmond",
+        "state": "VA",
+        "zipCode": "23219",
+        "coordinates": {
+          "latitude": 37.5385,
+          "longitude": -77.4336
+        }
+      }
+    },
+    {
+      "state": "Washington",
+      "capitol": "Olympia",
+      "address": {
+        "buildingName": "Washington State Capitol",
+        "street": "416 Sid Snyder Avenue SW",
+        "city": "Olympia",
+        "state": "WA",
+        "zipCode": "98504",
+        "coordinates": {
+          "latitude": 47.0354,
+          "longitude": -122.9055
+        }
+      }
+    },
+    {
+      "state": "West Virginia",
+      "capitol": "Charleston",
+      "address": {
+        "buildingName": "West Virginia State Capitol",
+        "street": "1900 Kanawha Boulevard East",
+        "city": "Charleston",
+        "state": "WV",
+        "zipCode": "25305",
+        "coordinates": {
+          "latitude": 38.3366,
+          "longitude": -81.6110
+        }
+      }
+    },
+    {
+      "state": "Wisconsin",
+      "capitol": "Madison",
+      "address": {
+        "buildingName": "Wisconsin State Capitol",
+        "street": "2 East Main Street",
+        "city": "Madison",
+        "state": "WI",
+        "zipCode": "53703",
+        "coordinates": {
+          "latitude": 43.0751,
+          "longitude": -89.3843
+        }
+      }
+    },
+    {
+      "state": "Wyoming",
+      "capitol": "Cheyenne",
+      "address": {
+        "buildingName": "Wyoming State Capitol",
+        "street": "200 West 24th Street",
+        "city": "Cheyenne",
+        "state": "WY",
+        "zipCode": "82002",
+        "coordinates": {
+          "latitude": 41.1393,
+          "longitude": -104.8198
+        }
+      }
+    }
+  ]
+}
