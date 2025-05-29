@@ -19,7 +19,7 @@ class StateCapital(TypedDict):
     address: Address
 
 
-def app_map_position():
+def app_map_position(token: str):
     """
     This function performs these steps:
     1.) Read all the capital addresses from a given JSON.
@@ -29,7 +29,7 @@ def app_map_position():
     5.) Verify that the JSON file outputted is Valid JSON.
     """
     state_capitals: List[StateCapital] = grab_state_capital_addresses_from_json("us_capital_addresses.json")
-    verify_state_capital_addresses_from_json(state_capitals)
+    verify_state_capital_addresses_from_json(state_capitals, token)
 
 def grab_state_capital_addresses_from_json(filename: str) -> List[StateCapital]:
     with open(filename, "r") as file:
@@ -38,76 +38,80 @@ def grab_state_capital_addresses_from_json(filename: str) -> List[StateCapital]:
     state_capital_addresses: List[StateCapital] = json_contents["stateCapitols"]
     return state_capital_addresses
 
-def verify_state_capital_addresses_from_json(state_capitals: List[StateCapital]) -> bool:
+def verify_state_capital_addresses_from_json(state_capitals: List[StateCapital], token: str) -> bool:
     """
     Verify the JSON file using the USPS API.
     USPS API only allows XML.
     """
+    api_endpoint = "https://apis.usps.com/addresses/v3/address"
 
-    api_batch_size = 5
-    for index in range(0, len(state_capitals), api_batch_size):
-        batch = state_capitals[index: index + api_batch_size]
-        xml_addresses = ""
-        for batch_index, state_capital in enumerate(batch):
-            xml_addresses += f"""
-                <Address ID="{batch_index}">
-                  <Address1>{state_capital.get("address", {}).get("street")}</Address1>
-                  <Address2></Address2>
-                  <City>{state_capital.get("address", {}).get("city")}</City>
-                  <State>{state_capital.get("state")}</State>
-                  <Zip5></Zip5>
-                  <Zip4></Zip4>
-                </Address>
-                """
+    header = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "User-Agent": "Traveling Salesman/1.0"
+    }
 
-        xml_batch_request = f"""
-            <AddressValidateRequest USERID="{grab_user_id_env()}">
-              {xml_addresses}
-            </AddressValidateRequest>
-            """
+    for state_capital in state_capitals:
+        state_capital_city = state_capital.get("address", {}).get("city")
+        state_capital_state = state_capital.get("address", {}).get("state")
+        state_capital_zip_code = state_capital.get("address", {}).get("zipCode")
+        state_capital_street_address = state_capital.get("address", {}).get("street")
 
-        url = f"https://secure.shippingapis.com/ShippingAPI.dll?API=Verify&XML={encoded_xml}"
+        body = {
+            "streetAddress": state_capital_street_address,
+            "state": state_capital_state
+        }
 
-        response = requests.get(url)
+        response = requests.get("https://apis.usps.com/addresses/v3/address", headers=header, json=body)
         response.raise_for_status()
+        response_state_capital = response.json()
+        response_state_capital_city = response_state_capital.get("address", {}).get("city")
+        response_state_capital_state = response_state_capital.get("address", {}).get("state")
+        response_state_capital_zip_code = response_state_capital.get("address", {}).get("ZIPCode")
+        response_state_capital_street_address = response_state_capital.get("address", {}).get("street")
 
-        root = ET.fromstring(response.content)
+        if state_capital_city != response_state_capital_city:
+            print(f"City from JSON:{state_capital_city} and City from Response:{response_state_capital_city} do not match!")
+            return False
+        elif state_capital_state != response_state_capital_state:
+            print(f"State from JSON:{state_capital_state} and State from Response:{response_state_capital_state} do not match!")
+            return False
+        elif state_capital_zip_code != response_state_capital_zip_code:
+            print(f"Zip Code from JSON:{state_capital_zip_code} and Zip Code from Response:{response_state_capital_state} do not match!")
+            return False
+        elif state_capital_street_address != response_state_capital_street_address:
+            print(f"Street Address from JSON:{state_capital_street_address} and Street Address from Response:{response_state_capital_street_address} do not match!")
+            return False
 
-        for batch_index, address in enumerate(root.findall('address')):
-            error = address.find('Error')
-            if error is not None:
-                desc = error.findtext('Description')
-                print(f"Address contains Error! Address:{batch[batch_index]} Error: {desc}")
-                return False
+        print(f"Address has been validated for {response_state_capital_state}")
 
-            response_address2 = address.findtext('secondaryAddress', default='')
-            response_city = address.findtext('city', default='')
-            response_state = address.findtext('state', default='')
-            response_zip_code = address.findtext('ZIPCode', default='')
-            batch_address = batch[batch_index].get('address', {}).get('street')
-            batch_city = batch[batch_index].get('address', {}).get('city')
-            batch_state = batch[batch_index].get('state')
-            batch_zip_code = batch[batch_index].get('address', {}).get('zipCode')
-
-            if batch_state != response_state:
-                print(f"JSON State Capital State: {batch_state} does not match {response_state} from USPS API ")
-                return False
-            elif batch_city != response_city:
-                print(f"JSON State Capitals City: {batch_city} does not match {response_city} from USPS API ")
-                return False
-            elif batch_address != response_address2:
-                print(f"JSON State Capitals City: {response_address2} does not match {batch_address} from USPS API ")
-                return False
-            elif batch_zip_code != response_zip_code:
-                print(f"JSON State Capitals City: {batch_zip_code} does not match {response_zip_code} from USPS API ")
-                return False
-
-    print(f"JSON Validated Successfully!")
     return True
 
+
 def grab_user_id_env() -> str | None:
-    return os.getenv("USERID")
+    return os.getenv("USER_ID")
+
+def grab_oauth_token() -> str | None:
+    client_id = os.getenv("CLIENT_ID")
+    client_secret = os.getenv("CLIENT_SECRET")
+
+    headers = {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    }
+
+    body = {
+        "grant_type": "client_credentials",
+        "client_id": client_id,
+        "client_secret": client_secret
+    }
+
+    response = requests.post("https://apis.usps.com/oauth2/v3/token", headers=headers, json=body)
+    response.raise_for_status()
+    return response.json()['access_token']
 
 if __name__ == "__main__":
     load_dotenv()
-    app_map_position()
+    OAuthToken = grab_oauth_token()
+    app_map_position(OAuthToken)
