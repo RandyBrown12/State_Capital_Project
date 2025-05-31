@@ -7,11 +7,8 @@ from datetime import datetime
 import requests
 from requests import HTTPError
 
-
 class Address(TypedDict):
-    buildingName: str
     street: str
-    streetAbbreviated: str
     city: str
     state: str
     zipCode: str
@@ -44,6 +41,33 @@ def create_json(token: str):
     output_state_capitals: List[StateCapital] = verify_state_capital_addresses_from_json(output_state_capitals, token)
 
     print("Program has finished Running!")
+
+def add_latitude_and_longitude(state_capitals: List[StateCapital]) -> List[StateCapital]:
+    copied_state_capitals: List[StateCapital] = state_capitals.copy()
+
+    for state_capital in copied_state_capitals:
+        params = {
+            "q": f"{state_capital['capital']},{state_capital['address']['state']}",
+            "format": "json"
+        }
+
+        headers = {
+            "User-Agent": "State_Capitals/1.0"
+        }
+
+        url = "https://nominatim.openstreetmap.org/search"
+        response = requests.get(url, headers=headers, params=params)
+
+        if response.status_code != 200:
+            raise HTTPError(f"Error Code: {response.status_code} from {url}. ERROR: {response.json()['error']}")
+
+        response_json = response.json()
+
+        state_capital["latitude"] = float(response_json[0]['lat'])
+        state_capital["longitude"] = float(response_json[0]['lon'])
+        print(f"{state_capital['state']} has Latitude and Longitude Added!")
+
+    return copied_state_capitals
 
 def output_state_capitals_into_json(state_capitals: List[StateCapital]) -> None:
     state_capitals_json = {"state_capitals": state_capitals}
@@ -80,33 +104,6 @@ def verify_json_file(filename: str) -> List[StateCapital]:
             raise ValueError(f"Incorrect Account of Required Keys {len(required_keys)}! Received {required_key_count} required keys!")
         print("A JSON object has been validated!")
     return state_capitals
-
-def add_latitude_and_longitude(state_capitals: List[StateCapital]) -> List[StateCapital]:
-    copied_state_capitals: List[StateCapital] = state_capitals.copy()
-
-    for state_capital in copied_state_capitals:
-        params = {
-            "q": f"{state_capital['capital']},{state_capital['address']['state']}",
-            "format": "json"
-        }
-
-        headers = {
-            "User-Agent": "State_Capitals/1.0"
-        }
-
-        url = "https://nominatim.openstreetmap.org/search"
-        response = requests.get(url, headers=headers, params=params)
-
-        if response.status_code != 200:
-            raise HTTPError(f"Error Code: {response.status_code} from {url}. ERROR: {response.json()['error']}")
-
-        response_json = response.json()
-
-        state_capital["latitude"] = float(response_json[0]['lat'])
-        state_capital["longitude"] = float(response_json[0]['lon'])
-        print(f"{state_capital['state']} has Latitude and Longitude Added!")
-
-    return copied_state_capitals
 
 def verify_state_capital_addresses_from_json(state_capitals: List[StateCapital], token: str) -> List[StateCapital]:
     """
