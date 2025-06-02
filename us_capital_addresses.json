@@ -9,7 +9,7 @@
         "state": "AL",
         "zipCode": "36130"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Alaska",
@@ -20,7 +20,7 @@
         "state": "AK",
         "zipCode": "99801"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Arizona",
@@ -31,7 +31,7 @@
         "state": "AZ",
         "zipCode": "85007"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Arkansas",
@@ -42,7 +42,7 @@
         "state": "AR",
         "zipCode": "72201"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "California",
@@ -53,7 +53,7 @@
         "state": "CA",
         "zipCode": "95814"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Colorado",
@@ -64,7 +64,7 @@
         "state": "CO",
         "zipCode": "80203"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Connecticut",
@@ -75,7 +75,7 @@
         "state": "CT",
         "zipCode": "06106"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Delaware",
@@ -86,7 +86,7 @@
         "state": "DE",
         "zipCode": "19901"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Florida",
@@ -97,7 +97,7 @@
         "state": "FL",
         "zipCode": "32399"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Georgia",
@@ -108,7 +108,7 @@
         "state": "GA",
         "zipCode": "30334"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Hawaii",
@@ -119,7 +119,7 @@
         "state": "HI",
         "zipCode": "96813"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Idaho",
@@ -130,7 +130,7 @@
         "state": "ID",
         "zipCode": "83720"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Illinois",
@@ -141,7 +141,7 @@
         "state": "IL",
         "zipCode": "62701"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Indiana",
@@ -152,7 +152,7 @@
         "state": "IN",
         "zipCode": "46204"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Iowa",
@@ -163,7 +163,7 @@
         "state": "IA",
         "zipCode": "50319"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Kansas",
@@ -174,7 +174,7 @@
         "state": "KS",
         "zipCode": "66612"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Kentucky",
@@ -185,7 +185,7 @@
         "state": "KY",
         "zipCode": "40601"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Louisiana",
@@ -196,7 +196,7 @@
         "state": "LA",
         "zipCode": "70802"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Maine",
@@ -207,7 +207,7 @@
         "state": "ME",
         "zipCode": "04330"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Maryland",
@@ -218,7 +218,7 @@
         "state": "MD",
         "zipCode": "21401"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Massachusetts",
@@ -229,7 +229,7 @@
         "state": "MA",
         "zipCode": "02133"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Michigan",
@@ -240,7 +240,7 @@
         "state": "MI",
         "zipCode": "48933"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Minnesota",
@@ -251,7 +251,7 @@
         "state": "MN",
         "zipCode": "55155"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Mississippi",
@@ -262,7 +262,7 @@
         "state": "MS",
         "zipCode": "39201"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Missouri",
@@ -273,7 +273,7 @@
         "state": "MO",
         "zipCode": "65101"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Montana",
@@ -284,7 +284,7 @@
         "state": "MT",
         "zipCode": "59601"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Nebraska",
@@ -295,7 +295,7 @@
         "state": "NE",
         "zipCode": "68508"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Nevada",
@@ -306,7 +306,7 @@
         "state": "NV",
         "zipCode": "89701"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "New Hampshire",
@@ -317,7 +317,7 @@
         "state": "NH",
         "zipCode": "03301"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "New Jersey",
@@ -328,7 +328,7 @@
         "state": "NJ",
         "zipCode": "08608"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "New Mexico",
@@ -339,7 +339,7 @@
         "state": "NM",
         "zipCode": "87501"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "New York",
@@ -350,7 +350,7 @@
         "state": "NY",
         "zipCode": "12224"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "North Carolina",
@@ -361,7 +361,7 @@
         "state": "NC",
         "zipCode": "27601"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "North Dakota",
@@ -372,7 +372,7 @@
         "state": "ND",
         "zipCode": "58505"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Ohio",
@@ -383,7 +383,7 @@
         "state": "OH",
         "zipCode": "43215"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Oklahoma",
@@ -394,7 +394,7 @@
         "state": "OK",
         "zipCode": "73105"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Oregon",
@@ -405,7 +405,7 @@
         "state": "OR",
         "zipCode": "97301"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Pennsylvania",
@@ -416,7 +416,7 @@
         "state": "PA",
         "zipCode": "17120"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Rhode Island",
@@ -427,7 +427,7 @@
         "state": "RI",
         "zipCode": "02903"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "South Carolina",
@@ -438,7 +438,7 @@
         "state": "SC",
         "zipCode": "29201"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "South Dakota",
@@ -449,7 +449,7 @@
         "state": "SD",
         "zipCode": "57501"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Tennessee",
@@ -460,7 +460,7 @@
         "state": "TN",
         "zipCode": "37243"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Texas",
@@ -471,7 +471,7 @@
         "state": "TX",
         "zipCode": "78701"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Utah",
@@ -482,7 +482,7 @@
         "state": "UT",
         "zipCode": "84103"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Vermont",
@@ -493,7 +493,7 @@
         "state": "VT",
         "zipCode": "05602"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Virginia",
@@ -504,7 +504,7 @@
         "state": "VA",
         "zipCode": "23219"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Washington",
@@ -515,7 +515,7 @@
         "state": "WA",
         "zipCode": "98501"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "West Virginia",
@@ -526,7 +526,7 @@
         "state": "WV",
         "zipCode": "25305"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Wisconsin",
@@ -537,7 +537,7 @@
         "state": "WI",
         "zipCode": "53703"
       },
-      "comment": ""
+      "_comment": ""
     },
     {
       "state": "Wyoming",
@@ -548,7 +548,7 @@
         "state": "WY",
         "zipCode": "82001"
       },
-      "comment": ""
+      "_comment": ""
     }
   ]
 }

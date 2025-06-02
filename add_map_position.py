@@ -17,7 +17,7 @@ class StateCapital(TypedDict, total=False):
     state: str
     capital: str
     address: Address
-    comment: str
+    _comment: str
     latitude: float
     longitude: float
 
@@ -80,7 +80,7 @@ def verify_json_file(filename: str) -> List[StateCapital]:
     with open(filename, 'r') as file:
         state_capitals: List[StateCapital] = json.load(file)['state_capitals']
 
-    required_keys = ["state", "capital", "address", "comment"]
+    required_keys = ["state", "capital", "address", "_comment"]
     required_address_keys = ["street", "city", "state", "zipCode"]
     optional_keys = ["latitude", "longitude"]
 
@@ -160,7 +160,7 @@ def verify_state_capital_addresses_from_json(state_capitals: List[StateCapital],
         print(f"State {state_capital["state"]} has been validated!")
         for state_capital_object in copied_state_capitals:
             if state_capital_object["state"] == state_capital["state"]:
-                state_capital_object["comment"] = f"This has been correctly validated by the USPS API on {datetime.now()}"
+                state_capital_object["_comment"] = f"This has been correctly validated by the USPS API on {datetime.now()}"
 
     return copied_state_capitals
 
