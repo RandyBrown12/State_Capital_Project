@@ -80,29 +80,23 @@ def verify_json_file(filename: str) -> List[StateCapital]:
     with open(filename, 'r') as file:
         state_capitals: List[StateCapital] = json.load(file)['state_capitals']
 
-    required_keys = ["state", "capital", "address", "_comment"]
-    required_address_keys = ["street", "city", "state", "zipCode"]
-    optional_keys = ["latitude", "longitude"]
+    required_keys = {"state", "capital", "address", "_comment"}
+    required_address_keys = {"street", "city", "state", "zipCode"}
+    optional_keys = {"latitude", "longitude"}
 
     for state_capital in state_capitals:
-        required_key_count = 0
-        for state_capital_key in state_capital.keys():
-            if state_capital_key not in required_keys and state_capital_key not in optional_keys:
-                raise ValueError(f"Invalid Key: ({state_capital_key}) in JSON {state_capital}")
-            elif state_capital_key == "address":
-                required_key_count += 1
-                required_address_key_count = 0
-                for address_key in state_capital['address'].keys():
-                    if address_key not in required_address_keys:
-                        raise ValueError(f"Invalid Address Key: ({address_key}) in JSON {state_capital}")
-                    required_address_key_count += 1
-                if required_address_key_count != len(required_address_keys):
-                    raise ValueError(f"Incorrect Account of Required Keys {len(required_address_keys)}! Received {required_address_key_count} required keys!")
-            elif state_capital_key in required_keys:
-                required_key_count += 1
-        if required_key_count != len(required_keys):
-            raise ValueError(f"Incorrect Account of Required Keys {len(required_keys)}! Received {required_key_count} required keys!")
-        print("A JSON object has been validated!")
+        if state_capital.keys() - optional_keys != required_keys:
+            raise ValueError(f"Invalid Keys Found: {state_capital.keys() - optional_keys - required_keys} in object {state_capital} ")
+        elif state_capital['address'].keys() != required_address_keys:
+            raise ValueError(f"Invalid Address Keys Found: {state_capital['address'].keys() - required_address_keys} in object {state_capital} ")
+        elif state_capital.get("latitude") is not None:
+            if not isinstance(state_capital.get("latitude"), float):
+                raise ValueError(f"Invalid Value in Latitude Found: {state_capital.get("latitude")} in object {state_capital}")
+        elif state_capital.get("longitude") is not None:
+            if not isinstance(state_capital.get("longitude"), float):
+                raise ValueError(f"Invalid Value in Longitude Found: {state_capital.get("longitude")} in object {state_capital}")
+
+        print(f"JSON object for {state_capital.get('state', 'NO STATE INPUTTED!!!')} has been validated!")
     return state_capitals
 
 def verify_state_capital_addresses_from_json(state_capitals: List[StateCapital], token: str) -> List[StateCapital]:
