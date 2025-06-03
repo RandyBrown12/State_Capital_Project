@@ -7,6 +7,9 @@ USPS API.
 ## How to run
 
 1. Install Python 3 in your computer.
-2. Install requests (v2.32.3) on pip.
+2. Install uv (Package manager for Python3).
 3. Change filename .env.example to .env and add the values needed from USPS API.
-4. Run the command: python add_map_position.py
+4. Add dependencies named requests (v2.32.2) and python-dotenv (v1.1.0)
+    > uv pip install python-dotenv requests
+5. Run the following command:
+    > uv run add_map_position.py
